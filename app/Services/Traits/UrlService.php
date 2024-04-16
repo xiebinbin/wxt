@@ -11,6 +11,11 @@ trait UrlService
         if(strpos($path, 'http') === 0){
             return $path;
         }
-        return Storage::disk('bitiful')->url($path);
+        $url = Storage::disk('bitiful')->url($path);
+        // 检测是否为图片
+        if (preg_match('/.*(\\.png|\\.jpg|\\.jpeg|\\.gif)$/', $url)) {
+            $url .= '?fmt=webp';
+        }
+        return $url;
     }
 }
