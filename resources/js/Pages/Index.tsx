@@ -74,11 +74,11 @@ export default ({ tags, currentTag, banners, products, code }: IProps) => {
             <img className='h-30px ml-4' src={logoWebp} />
         </div>
         <div>
-            <Swiper>
+            <Swiper autoplay={true}>
                 {banners.map((banner, index) => (
                     <Swiper.Item key={index}>
-                        <div className='h-150px bg-gray-700' onClick={() => window.open(banner.url)} >
-                            <img className='h-150px w-full' src={banner.img} />
+                        <div className='bg-gray-700' onClick={() => window.open(banner.url)} >
+                            <img className='w-full' src={banner.img} />
                         </div>
                     </Swiper.Item>
                 ))}
