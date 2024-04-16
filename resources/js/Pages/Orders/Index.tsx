@@ -112,31 +112,33 @@ export default () => {
                                 <span className='text-sm text-zinc-700'>订单状态：</span>
                                 <StatusText status={order.status} />
                             </div>
-                            <Divider />
-                            <div className='flex items-center'>
-                                <span className='text-sm text-zinc-700'>快递公司：</span>
-                                <span className='text-xs'>{order.logistics_company}</span>
-                            </div>
-                            <Divider />
-                            <div className='flex justify-between items-center'>
-                                <span className='text-sm'><span className='text-zinc-700'>快递单号：</span>{order.logistics_number}</span>
-                                <span className='text-sm text-zinc-700'></span>
-                                <span onClick={() => {
-                                    copy(order.logistics_number ?? '')
-                                        .then(() => {
-                                            Toast.show({
-                                                icon: 'success',
-                                                content: '复制成功'
+                            {order.status == 'PASSED' ? <>
+                                <Divider />
+                                <div className='flex items-center'>
+                                    <span className='text-sm text-zinc-700'>快递公司：</span>
+                                    <span className='text-xs'>{order.logistics_company}</span>
+                                </div>
+                                <Divider />
+                                <div className='flex justify-between items-center'>
+                                    <span className='text-sm'><span className='text-zinc-700'>快递单号：</span>{order.logistics_number}</span>
+                                    <span className='text-sm text-zinc-700'></span>
+                                    <span onClick={() => {
+                                        copy(order.logistics_number ?? '')
+                                            .then(() => {
+                                                Toast.show({
+                                                    icon: 'success',
+                                                    content: '复制成功'
+                                                })
                                             })
-                                        })
-                                        .catch(error => {
-                                            Toast.show({
-                                                icon: 'fail',
-                                                content: '复制失败'
+                                            .catch(error => {
+                                                Toast.show({
+                                                    icon: 'fail',
+                                                    content: '复制失败'
+                                                })
                                             })
-                                        })
-                                }} className='text-xs text-blue-600'>点击复制</span>
-                            </div>
+                                    }} className='text-xs text-blue-600'>点击复制</span>
+                                </div>
+                            </> : null}
                             {order.status == 'REJECTED' ? <>
                                 <Divider />
                                 <div className='flex items-center'>
