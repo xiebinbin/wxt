@@ -42,7 +42,7 @@ const ProductItem = (props: {
         </div>
         <div className='w-55% flex flex-col py-5px'>
             <span className='text-sm text-zinc-600'>{item.title}</span>
-            <span className='text-xs text-zinc-400 pb-5px'>{item.description}xxxx</span>
+            <span className='text-xs text-zinc-400 pb-5px'>{item.description}</span>
             <span className='text-xs text-zinc-400 pb-10px'>{item.apply_count}+人已办理</span>
             <CountDown date={item.expired_at} />
         </div>
