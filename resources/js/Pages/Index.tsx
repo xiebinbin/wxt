@@ -36,10 +36,8 @@ const ProductItem = (props: {
         <div className='w-20% justify-center flex items-center pl-10px'>
             <Image
                 src={item.list_cover}
-                style={{ borderRadius: 20 }}
                 fit='cover'
                 width={50}
-                height={50}
             />
         </div>
         <div className='w-55% flex flex-col py-5px'>

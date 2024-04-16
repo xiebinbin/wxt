@@ -107,8 +107,8 @@ export default ({ product }: ProductInfoProps) => {
     return <>
         <NavBar onBack={() => history.back()} backArrow={true}>套餐详情</NavBar>
         <div className='w-screen pb-50px'>
-            <img className='w-full h-200px' src={product.cover} alt="" />
-            <div className='w-full px-16px'>
+            <img className='w-full' src={product.cover} alt="" />
+            <div className='w-full px-16px mt-15px'>
                 <div className='flex'>
                     <div className='w-72%'>
                         <div>
