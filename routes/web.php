@@ -18,7 +18,7 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/home/index');
 });
 
 Route::get('/home/index', [HomeController::class, 'index'])->name('home');
