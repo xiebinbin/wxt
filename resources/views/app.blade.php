@@ -19,4 +19,6 @@
     <body class="font-sans antialiased">
         @inertia
     </body>
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+    <script>LA.init({id:"Jp0uh3QdrhpJ375x",ck:"Jp0uh3QdrhpJ375x"})</script>
 </html>
