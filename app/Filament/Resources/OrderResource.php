@@ -134,6 +134,7 @@ class OrderResource extends Resource
                             $billOne->type = 'INCOME';
                             $billOne->save();
                             Agent::where('id', $record->agent_id)->update([
+                                'valid_order_count'=> DB::raw('valid_order_count + 1'),
                                 'balance' => DB::raw('balance + ' . $record->commission_amount),
                                 'total_income' => DB::raw('total_income + ' . $record->commission_amount),
                             ]);
