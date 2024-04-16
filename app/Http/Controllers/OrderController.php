@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\OrderIndexRequest;
 use App\Http\Requests\OrderListRequest;
 use App\Http\Requests\OrderSubmitRequest;
-use App\Models\Product;
 use App\Services\AgentService;
 use App\Services\OrderService;
 use App\Services\ProductService;
@@ -30,7 +28,7 @@ class OrderController extends Controller
         DB::beginTransaction();
         try {
             OrderService::create($data);
-            ProductService::incApplyCount($product['id']);
+            AgentService::incOrderCount($product['id']);
             DB::commit();
             return response()->json(['code' => 200, 'message' => '下单成功'], 200);
         } catch (\Exception $e) {

@@ -33,4 +33,8 @@ class AgentService
     {
         return XCache::forget("agent:{$id}");
     }
+    public static function incOrderCount(int $id)
+    {
+        return Agent::where('id', $id)->increment('order_count');
+    }
 }
