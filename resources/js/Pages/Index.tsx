@@ -95,7 +95,7 @@ export default ({ tags, currentTag, banners, products, code }: IProps) => {
                     <small className='text-gray-400'>我的订单</small>
                 </div>
                 <div onClick={() => {
-                    location.href = '/customer'
+                    location.href = '/customer?code='+(localStorage.getItem('code') ?? 'S5u2')
                 }} className='w-1/4 flex items-center flex-col'>
                     <img className='w-full' src={chatWebp} />
                     <small className='text-gray-400'>在线客服</small>
