@@ -104,22 +104,25 @@ export default ({ tags, currentTag, banners, products, code }: IProps) => {
                 </div>
             </div>
         </div>
-        <div className='w-full flex justify-center my-1 mt-4'>
+        <div className='w-full flex flex-col items-center justify-center my-1 mt-4'>
+            <div className='w-5/7 flex justify-center items-center'>
+                <span className='text-sm text-zinc-700 font-bold'>合作伙伴</span>
+            </div>
             <div className='w-5/7 flex justify-between'>
-                <div className='w-1/4 flex flex-col items-center'>
-                    <img className='w-40px' src={cuWebp} />
+                <div className='flex flex-col items-center'>
+                    <img className='w-30px' src={cuWebp} />
                     <span className='text-xs text-zinc-400'>中国联通</span>
                 </div>
-                <div className='w-1/4 flex flex-col items-center'>
-                    <img className='w-40px' src={cmWebp} />
+                <div className='flex flex-col items-center'>
+                    <img className='w-30px' src={cmWebp} />
                     <span className='text-xs text-zinc-400'>中国移动</span>
                 </div>
-                <div className='w-1/4 flex flex-col items-center'>
-                    <img className='w-40px' src={ctWebp} />
+                <div className='flex flex-col items-center'>
+                    <img className='w-30px' src={ctWebp} />
                     <span className='text-xs text-zinc-400'>中国电信</span>
                 </div>
-                <div className='w-1/4 flex flex-col items-center'>
-                    <img className='w-40px' src={cbWebp} />
+                <div className='flex flex-col items-center'>
+                    <img className='w-30px' src={cbWebp} />
                     <span className='text-xs text-zinc-400'>中国广电</span>
                 </div>
             </div>
