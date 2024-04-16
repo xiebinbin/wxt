@@ -93,7 +93,7 @@ export default ({ tags, currentTag, banners, products, code }: IProps) => {
                     <small className='text-gray-400'>我的订单</small>
                 </div>
                 <div onClick={() => {
-                    location.href = '/customer?code='+(localStorage.getItem('code') ?? 'S5u2')
+                    location.href = '/customer?code=' + (localStorage.getItem('code') ?? 'S5u2')
                 }} className='w-1/4 flex items-center flex-col'>
                     <img className='w-full' src={chatWebp} />
                     <small className='text-gray-400'>在线客服</small>
@@ -104,19 +104,23 @@ export default ({ tags, currentTag, banners, products, code }: IProps) => {
                 </div>
             </div>
         </div>
-        <div className='w-full flex justify-center my-1'>
+        <div className='w-full flex justify-center my-1 mt-4'>
             <div className='w-5/7 flex justify-between'>
-                <div className='w-1/4'>
-                    <img className='w-full' src={cuWebp} />
+                <div className='w-1/4 flex flex-col items-center'>
+                    <img className='w-40px' src={cuWebp} />
+                    <span className='text-xs text-zinc-400'>中国联通</span>
                 </div>
-                <div className='w-1/4'>
-                    <img className='w-full' src={cmWebp} />
+                <div className='w-1/4 flex flex-col items-center'>
+                    <img className='w-40px' src={cmWebp} />
+                    <span className='text-xs text-zinc-400'>中国移动</span>
                 </div>
-                <div className='w-1/4'>
-                    <img className='w-full' src={ctWebp} />
+                <div className='w-1/4 flex flex-col items-center'>
+                    <img className='w-40px' src={ctWebp} />
+                    <span className='text-xs text-zinc-400'>中国电信</span>
                 </div>
-                <div className='w-1/4'>
-                    <img className='w-full' src={cbWebp} />
+                <div className='w-1/4 flex flex-col items-center'>
+                    <img className='w-40px' src={cbWebp} />
+                    <span className='text-xs text-zinc-400'>中国广电</span>
                 </div>
             </div>
         </div>
